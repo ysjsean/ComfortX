@@ -1,0 +1,19 @@
+.explore-more.container h1 {
+    font-weight: bold;
+}
+
+.explore-more.container h2, .explore-more.container h3 {
+    font-size: var(--font-size-M);
+}
+
+.explore-more.container p, .explore-more.container ul {
+    font-size: var(--font-size-S);
+    line-height: 1.6;
+}
+
+.explore-more.container .feature-details {
+    background-color: var(--card-bg-color);
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}

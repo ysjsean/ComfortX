@@ -1,0 +1,49 @@
+.form-container {
+    max-width: 400px;
+    background-color: var(--card-bg-color);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin: auto;
+}
+
+.form-title {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: var(--font-size-L);
+    margin-bottom: 1.5rem;
+}
+
+.form-label {
+    color: var(--primary-text-color);
+}
+
+.btn-primary {
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background-color: var(--button-hover-color);
+}
+
+.error-message {
+    color: var(--important-color);
+    font-size: var(--font-size-XS);
+    display: none;
+}
+
+.success-message {
+    color: var(--success-color);
+    font-size: var(--font-size-S);
+    text-align: center;
+}
+
+.text-center a {
+    color: var(--secondary-color);
+}
+
+.text-center a:hover {
+    color: var(--button-hover-color);
+}

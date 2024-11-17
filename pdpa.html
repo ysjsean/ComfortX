@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDPA Compliance | ComfortX</title>
+    <!-- Bootstrap -->
+    <!-- For Nav -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <!-- For Cart Window -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Bootstrap Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/pdpa.css"> 
+
+    
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <!-- Brand Logo -->
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="./assets/images/logo.png" alt="ComfortX Logo" height="30" class="mr-2">
+                <span>ComfortX</span>
+            </a>
+    
+            <!-- Toggler Button for Small Screens -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <!-- Collapsible Navbar Content -->
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <!-- Main Navigation Links - Centered on Larger Screens, Vertical on Smaller Screens -->
+                <ul class="navbar-nav mx-auto text-center flex-lg-row flex-column">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="reviews.html">Reviews</a></li>
+                    <li class="nav-item"><a class="nav-link" href="trade-in.html">Trade In</a></li>
+                    <li class="nav-item"><a class="nav-link" href="learn-more.html">Learn More</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                </ul>
+    
+                <!-- Right Section: Cart and Login/Logout - Align Right on Larger Screens, Vertical on Smaller Screens -->
+                <div class="navbar-nav text-center flex-lg-row flex-column rightNav">
+                    <a class="nav-link" href="#" data-bs-toggle="offcanvas" data-bs-target="#cartModal" aria-controls="cartModal">
+                        <div class="cart-icon-container position-relative">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count badge badge-danger">0</span>
+                        </div>
+                        Cart
+                    </a>
+                    <a class="nav-link" id="login-btn" href="login.html"><i class="fas fa-user"></i> Login</a>
+                    <a class="nav-link" id="logout-btn" href="#" onclick="logout()" style="display: none;"><i class="fas fa-user"></i> Logout</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="pdpa container">
+        <h1>Data Protection Notice</h1>
+        <p class="last-updated">Last updated: November 13, 2024</p>
+        <p>This Data Protection Notice ("Notice") sets out the basis which ComfortX ("we", "us", or "our") may collect, use, disclose or otherwise process personal data of our customers in accordance with the Personal Data Protection Act ("PDPA"). This Notice applies to personal data in our possession or under our control, including personal data in the possession of organisations which we have engaged to collect, use, disclose or process personal data for our purposes.</p>
+
+        <h2>Personal Data</h2>
+        <ol>
+            <li>As used in this Notice:
+                <ul>
+                    <li><strong>"Customer"</strong> means an individual who (a) has contacted us through any means to find out more about any goods or services we provide, or (b) may, or has, entered into a contract with us for the supply of any goods or services by us.</li>
+                    <li><strong>"Personal data"</strong> means data, whether true or not, about a customer who can be identified:
+                        <ul>
+                            <li>(a) from that data; or</li>
+                            <li>(b) from that data and other information to which we have or are likely to have access.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>Depending on the nature of your interaction with us, some examples of personal data which we may collect from you include your name, contact information such as your address, email address or telephone number, nationality, gender, date of birth, and financial information such as credit card numbers or bank account information.</li>
+            <li>Other terms used in this Notice shall have the meanings given to them in the PDPA (where the context so permits).</li>
+        </ol>
+
+        <h2>Collection, Use, and Disclosure of Personal Data</h2>
+        <ol start="4">
+            <li>We generally do not collect your personal data unless:
+                <ul>
+                    <li>(a) it is provided to us voluntarily by you directly or via a third party who has been duly authorised by you to disclose your personal data to us after you have been notified of the purposes for which the data is collected, and you have provided written consent to the collection and usage of your personal data for those purposes; or</li>
+                    <li>(b) collection and use of personal data without consent is permitted or required by the PDPA or other laws.</li>
+                </ul>
+                We shall seek your consent before collecting any additional personal data and before using your personal data for a purpose which has not been notified to you (except where permitted or authorised by law).
+            </li>
+            <li>We may collect and use your personal data for any or all of the following purposes:
+                <ul>
+                    <li>(a) Performing obligations in the course of or in connection with our provision of the goods and/or services requested by you;</li>
+                    <li>(b) Verifying your identity;</li>
+                    <li>(c) Responding to, handling, and processing queries, requests, applications, complaints, and feedback from you;</li>
+                </ul>
+            </li>
+        </ol>
+
+        <h2>Withdrawing Your Consent</h2>
+        <ol start="8">
+            <li>The consent that you provide for the collection, use and disclosure of your personal data will remain valid until such time it is being withdrawn by you in writing. You may withdraw consent and request us to stop using and/or disclosing your personal data by submitting your request in writing or via email to our Data Protection Officer at the contact details provided below.</li>
+            <li>Upon receipt of your written request to withdraw your consent, we may require reasonable time to process it and to notify you of the consequences, including any legal implications. We aim to process requests within ten (10) business days.</li>
+            <li>While we respect your decision to withdraw your consent, please note that we may not be able to continue providing our goods or services to you as a result. Should you decide to cancel your withdrawal of consent, please inform us in writing as described above.</li>
+            <li>Withdrawing consent does not affect our right to continue to collect, use, and disclose personal data where such actions are permitted or required under applicable laws.</li>
+        </ol>
+
+        <h2>Access to and Correction of Personal Data</h2>
+        <ol start="12">
+            <li>If you wish to make an access request to obtain a copy of your personal data or information on our use and disclosure of your data, or a correction request to update your data, you may submit your request in writing or via email to our Data Protection Officer.</li>
+            <li>We may charge a reasonable fee for access requests and will inform you of any fee before processing your request.</li>
+            <li>We will respond to your request as soon as possible, typically within thirty (30) days. If we need more time, we will inform you in writing.</li>
+        </ol>
+
+        <h2>Protection of Personal Data</h2>
+        <ol start="15">
+            <li>To safeguard your personal data, we have implemented appropriate administrative, physical, and technical measures, including encryption and secure storage. Personal data is only accessible to authorized personnel on a need-to-know basis.</li>
+            <li>However, no method of transmission over the Internet or electronic storage is fully secure. We strive to protect your information but cannot guarantee its absolute security.</li>
+        </ol>
+
+        <h2>Accuracy of Personal Data</h2>
+        <ol start="17">
+            <li>We rely on the accuracy of data provided by you. Please update us if there are changes to your personal data by informing our Data Protection Officer.</li>
+        </ol>
+
+        <h2>Retention of Personal Data</h2>
+        <ol start="18">
+            <li>We retain your personal data as long as necessary for the purposes for which it was collected, or as required by law.</li>
+            <li>We will cease to retain your personal data when it is no longer needed for legal or business purposes.</li>
+        </ol>
+
+        <h2>Transfers of Personal Data Outside of Singapore</h2>
+        <ol start="20">
+            <li>We do not transfer your personal data outside of Singapore unless necessary. If so, we will obtain your consent and ensure that it receives comparable protection.</li>
+        </ol>
+
+        <h2>Data Protection Officer</h2>
+        <ol start="21">
+            <li>You may contact our Data Protection Officer if you have any inquiries about our data protection policies or wish to make any requests. Contact details are as follows:<br>
+                Email: dpo@comfortx.com<br>
+                Phone: +65 1234 5678<br>
+                Address: 123 ComfortX Lane, Singapore 123456
+            </li>
+        </ol>
+
+        <h2>Effect of Notice and Changes to Notice</h2>
+        <ol start="22">
+            <li>This Notice works alongside any other notices or clauses related to personal data that we provide.</li>
+            <li>We may update this Notice occasionally. Refer to the “Last updated” date to check for changes. Your continued use of our services signifies acceptance of such changes.</li>
+        </ol>
+    </div>
+    
+    <!-- Cart Popup -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="cartModal" aria-labelledby="cartModalLabel">
+        <div class="offcanvas-header" style="background-color: var(--primary-color); color: var(--secondary-text-color);">
+            <h5 class="offcanvas-title" id="cartModalLabel">CART</h5>
+            <button type="button" class="btn-close text-light" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <!-- Free shipping message -->
+            <div class="alert" style="background-color: var(--success-color); color: var(--secondary-text-color);">
+                <i class="bi bi-check-circle-fill me-2"></i>
+                <span>Your order qualifies for free shipping and free returns</span>
+            </div>
+            <!-- Cart Items -->
+            <div id="cart-items">
+                <!-- Cart items will be dynamically rendered here -->
+            </div>
+            <hr>
+            <!-- Subtotal -->
+            <div id="cart-subtotal" class="d-flex justify-content-between align-items-center">
+                <p class="text-muted mb-0">Item Subtotal:</p>
+                <p class="fw-bold mb-0">$0.00</p>
+            </div>
+            <p class="text-muted" style="font-size: 0.9em;">(Not Including Tax or Shipping)</p>
+            <!-- Checkout Button -->
+            <a href="checkout.html" class="btn d-block text-center mt-3" style="background-color: var(--primary-color); color: var(--secondary-text-color);">Checkout</a>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer py-4">
+        <p>&copy; 2024 ComfortX. All rights reserved.</p>
+        <ul class="list-inline">
+            <li class="list-inline-item"><a href="./pdpa.html">Privacy Policy</a></li>
+            <li class="list-inline-item"><a href="./tos.html">Terms of Service</a></li>
+            <li class="list-inline-item"><a href="./contact.html">Contact Us</a></li>
+        </ul>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="./js/nav.js"></script>
+    <script src="./js/cart.js"></script>
+</body>
+</html>

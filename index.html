@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ComfortX - Ergonomic Mouse for Professionals</title>
+
+    <!-- Bootstrap -->
+    <!-- For Nav -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <!-- For Cart Window -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+    <!-- Bootstrap Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <link rel="stylesheet" href="./css/index.css">
+    
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <!-- Brand Logo -->
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="./assets/images/logo.png" alt="ComfortX Logo" height="30" class="mr-2">
+                <span>ComfortX</span>
+            </a>
+    
+            <!-- Toggler Button for Small Screens -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <!-- Collapsible Navbar Content -->
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <!-- Main Navigation Links - Centered on Larger Screens, Vertical on Smaller Screens -->
+                <ul class="navbar-nav mx-auto text-center flex-lg-row flex-column">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="reviews.html">Reviews</a></li>
+                    <li class="nav-item"><a class="nav-link" href="trade-in.html">Trade In</a></li>
+                    <li class="nav-item"><a class="nav-link" href="learn-more.html">Learn More</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                </ul>
+    
+                <!-- Right Section: Cart and Login/Logout - Align Right on Larger Screens, Vertical on Smaller Screens -->
+                <div class="navbar-nav text-center flex-lg-row flex-column rightNav">
+                    <a class="nav-link" href="#" data-bs-toggle="offcanvas" data-bs-target="#cartModal" aria-controls="cartModal">
+                        <div class="cart-icon-container position-relative">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count badge badge-danger">0</span>
+                        </div>
+                        Cart
+                    </a>
+                    <a class="nav-link" id="login-btn" href="login.html"><i class="fas fa-user"></i> Login</a>
+                    <a class="nav-link" id="logout-btn" href="#" onclick="logout()" style="display: none;"><i class="fas fa-user"></i> Logout</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+
+    
+    <!-- Hero Section with Main Product and Free Gifts -->
+    <section class="hero-section d-flex align-items-center">
+        <div class="hero-content text-light">
+            <p class="hero-top-text">★★★★★ Top rated by <span>1,331 Comfort Enthusiasts</span></p>
+            <h1>Level Up Your Productivity</h1>
+            <p class="hero-subtext">Our ergonomic mouse and tools elevate your entire work experience</p>
+            <a href="menu.html" class="btn btn-success btn-lg mt-3">Shop Now</a>
+            <div class="free-gifts d-flex mt-4">
+                <div class="gift-item">
+                    <img src="assets/images/mouse_pad.png" alt="Mouse Pad">
+                    <p>Mouse Pad - Studio Series</p>
+                </div>
+                <div class="gift-item">
+                    <img src="assets/images/usb.png" alt="USB Hub">
+                    <p>USB Hub</p>
+                </div>
+                <div class="gift-item">
+                    <img src="assets/images/pouch.png" alt="Storage Pouch">
+                    <p>Storage Pouch</p>
+                </div>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="assets/images/black_mouse.png" alt="ComfortX Ergonomic Mouse">
+        </div>
+    </section>
+
+    <!-- Trade-In Promotion Section -->
+    <section class="trade-in-section text-center py-4">
+        <div class="container">
+            <h2 class="trade-in-title mb-3">Upgrade to ComfortX with Our Trade-In Program!</h2>
+            <p class="trade-in-description">Turn in your old mouse and get <strong>20% off</strong> on a new ComfortX mouse.</p>
+            <p class="trade-in-description">Experience comfort like never before while contributing to a greener future.</p>
+            <a href="trade-in.html" class="btn btn-success btn-lg">Learn More</a>
+        </div>
+    </section>
+
+
+
+
+    <!-- Highlights Section -->
+    <section class="highlights-section py-5">
+        <div class="container text-center">
+            <h2 class="highlights-title mb-4">Highlights</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="highlight-feature">
+                        <i class="fas fa-hand-holding highlight-feature-icon mb-3"></i>
+                        <h4 class="highlight-feature-title">Ergonomic Design</h4>
+                        <p>Designed to fit the natural curve of your hand, reducing strain and improving comfort during long hours of use.</p>
+                        <a href="learn-more.html#ergonomic" class="btn btn-success btn-sm">Learn More</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="highlight-feature">
+                        <i class="fas fa-crosshairs highlight-feature-icon mb-3"></i>
+                        <h4 class="highlight-feature-title">Precision Tracking</h4>
+                        <p>High-accuracy sensors ensure smooth and precise movements, perfect for both work and gaming.</p>
+                        <a href="learn-more.html#tracking" class="btn btn-success btn-sm">Learn More</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="highlight-feature">
+                        <i class="fas fa-battery-full highlight-feature-icon mb-3"></i>
+                        <h4 class="highlight-feature-title">Long Battery Life</h4>
+                        <p>Extended usage without frequent recharges, keeping you productive without interruptions.</p>
+                        <a href="learn-more.html#battery-life" class="btn btn-success btn-sm">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Experience Section -->
+    <section class="enhanced-experience-section py-5">
+        <div class="container">
+            <!-- Enhanced Feature 1 -->
+            <div class="row align-items-center mb-5">
+                <div class="col-md-6 text-center">
+                    <img src="./assets/images/comfort.jpg" alt="Comfort" class="img-fluid rounded">
+                </div>
+                <div class="col-md-6">
+                    <h4 class="enhanced-feature-title">Comfort</h4>
+                    <p>Designed for prolonged use without strain, reducing fatigue for extended sessions.</p>
+                    <p>There's a comfortable, rubber grip texture for your palm on the top half of the mouse towards the back, and the buttons are well-placed and easy to reach.</p>
+                    <p>Left-Handed version available!</p>
+                    <a href="menu.html" class="btn btn-success mt-3">Buy Now</a>
+                </div>
+            </div>
+
+            <!-- Enhanced Feature 2 (Alternating Layout) -->
+            <div class="row align-items-center mb-5 flex-row-reverse">
+                <div class="col-md-6 text-center">
+                    <img src="./assets/images/customisation.jpg" alt="Customizability" class="img-fluid rounded">
+                </div>
+                <div class="col-md-6">
+                    <h4 class="enhanced-feature-title">Customisability</h4>
+                    <p>This mouse uses ComfortX Options for customisation. <strong>The software is straightforward to use.</strong></p>
+                    <p>It allows you to reprogram buttons, assign macros, and configure custom profiles for specific programs.</p>
+                    <a href="customise.html" class="btn btn-success mt-3">Customize</a>
+                </div>
+            </div>
+
+            <!-- Enhanced Feature 3 -->
+            <div class="row align-items-center mb-5">
+                <div class="col-md-6 text-center">
+                    <img src="./assets/images/multi-purpose.jpg" alt="Multi-Purpose" class="img-fluid rounded">
+                </div>
+                <div class="col-md-6">
+                    <h4 class="enhanced-feature-title">Multi-Purpose</h4>
+                    <p>Seamlessly transitions between work and casual gaming, offering versatility for any task.</p>
+                    <a href="explore-more.html" class="btn btn-success mt-3">Explore More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Reviews Section -->
+    <section class="reviews-section bg-light py-5">
+        <div class="container">
+            <h2 class="text-center">See Why Our Customers Love ComfortX</h2>
+            <div class="review-summary text-center my-4">
+                <span class="star-rating">★★★★☆</span> 4.7 based on 1,234 reviews
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <blockquote class="blockquote">
+                        <p>"ComfortX has completely changed my work experience. I can work for hours without any discomfort!"</p>
+                        <footer class="blockquote-footer">Alex J., Freelance Designer</footer>
+                    </blockquote>
+                </div>
+                <div class="col-md-6">
+                    <blockquote class="blockquote">
+                        <p>"Amazing precision and comfort. I don’t think I can go back to any other mouse."</p>
+                        <footer class="blockquote-footer">Jamie L., Software Engineer</footer>
+                    </blockquote>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="reviews.html" class="btn btn-success">Read All Reviews</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Frequently Asked Questions</h2>
+            <div class="accordion" id="faqAccordion">
+                <div class="faq-item">
+                    <button class="faq-question" type="button" data-toggle="collapse" data-target="#faq1" aria-expanded="true" aria-controls="faq1">
+                        What makes ComfortX different from other ergonomic mice?
+                    </button>
+                    <div id="faq1" class="collapse show" data-parent="#faqAccordion">
+                        <div class="faq-answer">
+                            ComfortX is designed with advanced ergonomic principles, providing superior support for your hand and wrist. It reduces strain and enhances comfort for prolonged use, making it ideal for both work and gaming environments.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question collapsed" type="button" data-toggle="collapse" data-target="#faq2" aria-expanded="false" aria-controls="faq2">
+                        Does ComfortX come with any warranty?
+                    </button>
+                    <div id="faq2" class="collapse" data-parent="#faqAccordion">
+                        <div class="faq-answer">
+                            Yes, ComfortX includes a 2-year warranty that covers manufacturing defects. If you encounter any issues, our customer service team will be happy to assist you.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question collapsed" type="button" data-toggle="collapse" data-target="#faq3" aria-expanded="false" aria-controls="faq3">
+                        Is ComfortX compatible with all operating systems?
+                    </button>
+                    <div id="faq3" class="collapse" data-parent="#faqAccordion">
+                        <div class="faq-answer">
+                            Yes, ComfortX is compatible with Windows, macOS, and Linux. Simply plug it in via USB or connect it wirelessly, and you're ready to go.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question collapsed" type="button" data-toggle="collapse" data-target="#faq4" aria-expanded="false" aria-controls="faq4">
+                        How long does the battery last on a single charge?
+                    </button>
+                    <div id="faq4" class="collapse" data-parent="#faqAccordion">
+                        <div class="faq-answer">
+                            The battery on ComfortX can last up to 60 days on a single charge, depending on usage. It’s designed for extended use without frequent recharging.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question collapsed" type="button" data-toggle="collapse" data-target="#faq5" aria-expanded="false" aria-controls="faq5">
+                        Does ComfortX support customisation for buttons and DPI?
+                    </button>
+                    <div id="faq5" class="collapse" data-parent="#faqAccordion">
+                        <div class="faq-answer">
+                            Absolutely! ComfortX allows you to customise button functions and adjust DPI sensitivity to suit your preferences, providing greater control and flexibility.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="contact.html" class="btn btn-light btn-more-questions">More Questions?</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Subscription Section -->
+    <section class="subscription-section text-center py-5">
+        <h2 class="subscription-title">Stay in the Loop</h2>
+        <p class="subscription-text">Sign up for occasional product launches, news, and special offers.</p>
+        <form id="subscriptionForm" class="subscription-form d-inline-flex">
+            <div class="input-group">
+                <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                <input type="email" id="emailInput" class="form-control" placeholder="Enter your email" required>
+                <button type="submit" class="btn btn-success">Subscribe</button>
+            </div>
+        </form>
+        <p id="feedbackMessage"></p>
+    </section>
+
+    <!-- Cart Popup -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="cartModal" aria-labelledby="cartModalLabel">
+        <div class="offcanvas-header" style="background-color: var(--primary-color); color: var(--secondary-text-color);">
+            <h5 class="offcanvas-title" id="cartModalLabel">CART</h5>
+            <button type="button" class="btn-close text-light" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <!-- Free shipping message -->
+            <div class="alert" style="background-color: var(--success-color); color: var(--secondary-text-color);">
+                <i class="bi bi-check-circle-fill me-2"></i>
+                <span>Your order qualifies for free shipping and free returns</span>
+            </div>
+            <!-- Cart Items -->
+            <div id="cart-items">
+                <!-- Cart items will be dynamically rendered here -->
+            </div>
+            <hr>
+            <!-- Subtotal -->
+            <div id="cart-subtotal" class="d-flex justify-content-between align-items-center">
+                <p class="text-muted mb-0">Item Subtotal:</p>
+                <p class="fw-bold mb-0">$0.00</p>
+            </div>
+            <p class="text-muted" style="font-size: 0.9em;">(Not Including Tax or Shipping)</p>
+            <!-- Checkout Button -->
+            <a href="checkout.html" class="btn d-block text-center mt-3" style="background-color: var(--primary-color); color: var(--secondary-text-color);">Checkout</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer py-4">
+        <p>&copy; 2024 ComfortX. All rights reserved.</p>
+        <ul class="list-inline">
+            <li class="list-inline-item"><a href="./pdpa.html">Privacy Policy</a></li>
+            <li class="list-inline-item"><a href="./tos.html">Terms of Service</a></li>
+            <li class="list-inline-item"><a href="./contact.html">Contact Us</a></li>
+        </ul>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="./js/nav.js"></script>
+    <script src="./js/cart.js"></script>
+
+    <script>
+        document.getElementById("emailInput").value = "john.doe@gmail.com";
+       // Initialize an array of subscribed emails in local storage if not already set
+        if (!localStorage.getItem("subscribedEmails")) {
+            localStorage.setItem("subscribedEmails", JSON.stringify([]));
+        }
+
+        // Handle subscription form submission
+        document.getElementById('subscriptionForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent page reload
+
+            const emailInput = document.getElementById('emailInput');
+            const email = emailInput.value.trim();
+            const feedbackMessage = document.getElementById('feedbackMessage');
+
+            // Validate email format
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Basic email validation regex
+            if (!emailRegex.test(email)) {
+                feedbackMessage.textContent = 'Please enter a valid email address.';
+                feedbackMessage.className = 'text-danger';
+                clearFeedbackMessageAfterDelay(feedbackMessage, 2000);
+                return;
+            }
+
+            // Retrieve the list of subscribed emails from local storage
+            const subscribedEmails = JSON.parse(localStorage.getItem("subscribedEmails")) || [];
+
+            // Check if the email is already subscribed
+            if (subscribedEmails.includes(email)) {
+                feedbackMessage.textContent = 'This email is already subscribed.';
+                feedbackMessage.className = 'text-warning';
+                clearFeedbackMessageAfterDelay(feedbackMessage, 2000);
+                return;
+            }
+
+            // Add the new email to the list
+            subscribedEmails.push(email);
+            localStorage.setItem("subscribedEmails", JSON.stringify(subscribedEmails));
+
+            // Display success message
+            feedbackMessage.textContent = `Thank you for subscribing, ${email}!`;
+            feedbackMessage.className = 'text-success';
+
+            // Clear the input field
+            emailInput.value = '';
+
+            // Clear feedback message after 2 seconds
+            clearFeedbackMessageAfterDelay(feedbackMessage, 2000);
+        });
+
+        // Function to clear feedback message after a delay
+        function clearFeedbackMessageAfterDelay(element, delay) {
+            setTimeout(() => {
+                element.textContent = ''; // Clear the message text
+                element.className = ''; // Reset the class
+            }, delay);
+        }
+    </script>
+</body>
+</html>

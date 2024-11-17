@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service</title>
+    <!-- Bootstrap CSS -->
+    <!-- For Nav -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <!-- For Cart Window -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Bootstrap Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/tos.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <!-- Brand Logo -->
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="./assets/images/logo.png" alt="ComfortX Logo" height="30" class="mr-2">
+                <span>ComfortX</span>
+            </a>
+    
+            <!-- Toggler Button for Small Screens -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <!-- Collapsible Navbar Content -->
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <!-- Main Navigation Links - Centered on Larger Screens, Vertical on Smaller Screens -->
+                <ul class="navbar-nav mx-auto text-center flex-lg-row flex-column">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="reviews.html">Reviews</a></li>
+                    <li class="nav-item"><a class="nav-link" href="trade-in.html">Trade In</a></li>
+                    <li class="nav-item"><a class="nav-link" href="learn-more.html">Learn More</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                </ul>
+    
+                <!-- Right Section: Cart and Login/Logout - Align Right on Larger Screens, Vertical on Smaller Screens -->
+                <div class="navbar-nav text-center flex-lg-row flex-column rightNav">
+                    <a class="nav-link" href="#" data-bs-toggle="offcanvas" data-bs-target="#cartModal" aria-controls="cartModal">
+                        <div class="cart-icon-container position-relative">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count badge badge-danger">0</span>
+                        </div>
+                        Cart
+                    </a>
+                    <a class="nav-link" id="login-btn" href="login.html"><i class="fas fa-user"></i> Login</a>
+                    <a class="nav-link" id="logout-btn" href="#" onclick="logout()" style="display: none;"><i class="fas fa-user"></i> Logout</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="container terms-section">
+        <h1>Terms of Service</h1>
+        <p class="last-updated">Last updated: November 13, 2024</p>
+
+        <!-- Section 1: Introduction -->
+        <section>
+            <h2>1. Introduction</h2>
+            <p>Welcome to our platform. By accessing or using our website, you agree to comply with and be bound by these Terms of Service. If you do not agree with these terms, please do not use our services.</p>
+        </section>
+
+        <!-- Section 2: User Accounts -->
+        <section>
+            <h2>2. User Accounts</h2>
+            <p>When you create an account, you must provide accurate, complete, and up-to-date information. You are responsible for maintaining the confidentiality of your account and password and for restricting access to your account.</p>
+            <ul>
+                <li>You must notify us immediately of any unauthorized use of your account.</li>
+                <li>You are responsible for all activities conducted under your account.</li>
+                <li>We reserve the right to terminate or suspend your account if we suspect a violation of these terms.</li>
+            </ul>
+        </section>
+
+        <!-- Section 3: Prohibited Activities -->
+        <section>
+            <h2>3. Prohibited Activities</h2>
+            <p>You agree not to engage in any of the following prohibited activities:</p>
+            <ul>
+                <li>Using the service for unlawful purposes or in violation of any applicable laws.</li>
+                <li>Accessing or using another user's account without permission.</li>
+                <li>Engaging in activities that could harm, disrupt, or damage our services.</li>
+                <li>Attempting to bypass security measures to gain unauthorized access to our systems.</li>
+            </ul>
+        </section>
+
+        <!-- Section 4: Intellectual Property -->
+        <section>
+            <h2>4. Intellectual Property</h2>
+            <p>All content on our platform, including text, images, logos, and software, is the intellectual property of our company or its licensors. You may not copy, modify, distribute, or use this content without prior written consent.</p>
+        </section>
+
+        <!-- Section 5: Limitation of Liability -->
+        <section>
+            <h2>5. Limitation of Liability</h2>
+            <p>To the fullest extent permitted by law, our company will not be liable for any damages arising from your use of the service. This includes direct, indirect, incidental, and consequential damages.</p>
+        </section>
+
+        <!-- Section 6: Modifications to the Terms -->
+        <section>
+            <h2>6. Modifications to the Terms</h2>
+            <p>We reserve the right to modify these Terms of Service at any time. We will notify you of any changes by posting the updated terms on our website. Continued use of our services after such changes constitutes your agreement to the new terms.</p>
+        </section>
+
+        <!-- Section 7: Contact Information -->
+        <section>
+            <h2>7. Contact Information</h2>
+            <p>If you have any questions or concerns about these Terms of Service, please contact us:</p>
+            <p><strong>Email:</strong> support@comfortx.com</p>
+        </section>
+    </div>
+
+    <!-- Cart Popup -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="cartModal" aria-labelledby="cartModalLabel">
+        <div class="offcanvas-header" style="background-color: var(--primary-color); color: var(--secondary-text-color);">
+            <h5 class="offcanvas-title" id="cartModalLabel">CART</h5>
+            <button type="button" class="btn-close text-light" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <!-- Free shipping message -->
+            <div class="alert" style="background-color: var(--success-color); color: var(--secondary-text-color);">
+                <i class="bi bi-check-circle-fill me-2"></i>
+                <span>Your order qualifies for free shipping and free returns</span>
+            </div>
+            <!-- Cart Items -->
+            <div id="cart-items">
+                <!-- Cart items will be dynamically rendered here -->
+            </div>
+            <hr>
+            <!-- Subtotal -->
+            <div id="cart-subtotal" class="d-flex justify-content-between align-items-center">
+                <p class="text-muted mb-0">Item Subtotal:</p>
+                <p class="fw-bold mb-0">$0.00</p>
+            </div>
+            <p class="text-muted" style="font-size: 0.9em;">(Not Including Tax or Shipping)</p>
+            <!-- Checkout Button -->
+            <a href="checkout.html" class="btn d-block text-center mt-3" style="background-color: var(--primary-color); color: var(--secondary-text-color);">Checkout</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer py-4">
+        <p>&copy; 2024 ComfortX. All rights reserved.</p>
+        <ul class="list-inline">
+            <li class="list-inline-item"><a href="./pdpa.html">Privacy Policy</a></li>
+            <li class="list-inline-item"><a href="./tos.html">Terms of Service</a></li>
+            <li class="list-inline-item"><a href="./contact.html">Contact Us</a></li>
+        </ul>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="./js/nav.js"></script>
+    <script src="./js/cart.js"></script>
+</body>
+</html>

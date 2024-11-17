@@ -1,0 +1,33 @@
+.signup-container {
+    max-width: 400px;
+    background-color: var(--card-bg-color);
+    padding: 5rem 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 auto 2rem;
+}
+
+.btn-signup {
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
+    font-weight: bold;
+    font-size: var(--font-size-M);
+    width: 100%;
+}
+
+.btn-signup:hover {
+    background-color: var(--button-hover-color);
+}
+
+.error-message {
+    color: var(--important-color);
+    font-size: var(--font-size-XS);
+    display: none;
+}
+
+.success-message {
+    color: var(--success-color);
+    font-size: var(--font-size-S);
+    display: none;
+    text-align: center;
+}

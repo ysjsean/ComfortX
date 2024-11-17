@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ComfortX - Ergonomic Mouse for Professionals</title>
+
+    <!-- Bootstrap -->
+    <!-- For Nav -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <!-- For Cart Window -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Bootstrap Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/menu.css">
+</head>
+<body>
+    <!-- Notification Banner -->
+    <div id="notification" class="notification hidden"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="./assets/images/logo.png" alt="ComfortX Logo" height="30" class="mr-2">
+                <span>ComfortX</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav mx-auto text-center flex-lg-row flex-column">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="menu.html">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="reviews.html">Reviews</a></li>
+                    <li class="nav-item"><a class="nav-link" href="trade-in.html">Trade In</a></li>
+                    <li class="nav-item"><a class="nav-link" href="learn-more.html">Learn More</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                </ul>
+                <div class="navbar-nav text-center flex-lg-row flex-column rightNav">
+                    <a class="nav-link" href="#" data-bs-toggle="offcanvas" data-bs-target="#cartModal" aria-controls="cartModal">
+                        <div class="cart-icon-container position-relative">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count badge badge-danger">0</span>
+                        </div>
+                        Cart
+                    </a>
+                    <a class="nav-link" id="login-btn" href="login.html"><i class="fas fa-user"></i> Login</a>
+                    <a class="nav-link" id="logout-btn" href="#" onclick="logout()" style="display: none;"><i class="fas fa-user"></i> Logout</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Menu Section -->
+    <div class="container">
+        <main>
+            <h1 class="text-center mb-4">Choose Your Free Gifts</h1>
+            <div class="row justify-content-center">
+                <div class="col-md-10">
+                    <!-- Card: Mouse and Free Gifts -->
+                    <div class="card p-4 product-card">
+                        <div class="row align-items-center">
+                            <!-- Left Column: Mouse Image -->
+                            <div class="col-md-6 text-center">
+                                <img src="./assets/images/black_mouse.png" 
+                                        alt="Ergonomic Mouse" 
+                                        class="img-fluid main-product-image">
+                            </div>
+        
+                            <!-- Right Column: Details and Free Gifts -->
+                            <div class="col-md-6">
+                                <h5 class="card-title">ComfortX LIFT</h5>
+                                <p class="card-text">Black Mouse + Choose <strong>Two</strong> Free Gifts</p>
+        
+                                <!-- Price Section -->
+                                <div class="price-section text-muted mb-3">
+                                    <h4 class="price">$69.99</h4>
+                                    <p class="small text-muted">Includes two free gifts</p>
+                                </div>
+        
+                                <div class="text-muted mb-3">Select Your Free Gifts:</div>
+        
+                                <!-- Free Gift Options -->
+                                <div class="row text-center mb-3">
+                                    <div class="col-4">
+                                        <div id="pad" class="gift-option" onclick="selectGift('pad')">
+                                            <img src="./assets/images/mouse_pad.png" alt="Mouse Pad" class="img-fluid gift-image">
+                                            <p class="small text-muted">Mouse Pad</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div id="usb" class="gift-option" onclick="selectGift('usb')">
+                                            <img src="./assets/images/usb.png" alt="USB Hub" class="img-fluid gift-image">
+                                            <p class="small text-muted">USB Hub</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div id="pouch" class="gift-option" onclick="selectGift('pouch')">
+                                            <img src="./assets/images/pouch.png" alt="Mouse Pouch" class="img-fluid gift-image">
+                                            <p class="small text-muted">Mouse Pouch</p>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <!-- Add to Cart Button -->
+                                <button class="btn btn-success w-100" onclick="addToCart()">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>                
+    </div>
+
+    <!-- Cart Popup -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="cartModal" aria-labelledby="cartModalLabel">
+        <div class="offcanvas-header" style="background-color: var(--primary-color); color: var(--secondary-text-color);">
+            <h5 class="offcanvas-title" id="cartModalLabel">CART</h5>
+            <button type="button" class="btn-close text-light" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <!-- Free shipping message -->
+            <div class="alert" style="background-color: var(--success-color); color: var(--secondary-text-color);">
+                <i class="bi bi-check-circle-fill me-2"></i>
+                <span>Your order qualifies for free shipping and free returns</span>
+            </div>
+            <!-- Cart Items -->
+            <div id="cart-items">
+                <!-- Cart items will be dynamically rendered here -->
+            </div>
+            <hr>
+            <!-- Subtotal -->
+            <div id="cart-subtotal" class="d-flex justify-content-between align-items-center">
+                <p class="text-muted mb-0">Item Subtotal:</p>
+                <p class="fw-bold mb-0">$0.00</p>
+            </div>
+            <p class="text-muted" style="font-size: 0.9em;">(Not Including Tax or Shipping)</p>
+            <!-- Checkout Button -->
+            <a href="checkout.html" class="btn d-block text-center mt-3" style="background-color: var(--primary-color); color: var(--secondary-text-color);">Checkout</a>
+        </div>
+    </div>
+
+
+
+    <!-- Footer -->
+    <footer class="footer py-4">
+        <p>&copy; 2024 ComfortX. All rights reserved.</p>
+        <ul class="list-inline">
+            <li class="list-inline-item"><a href="./pdpa.html">Privacy Policy</a></li>
+            <li class="list-inline-item"><a href="./tos.html">Terms of Service</a></li>
+            <li class="list-inline-item"><a href="./contact.html">Contact Us</a></li>
+        </ul>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/notification.js"></script>
+    <script src="./js/nav.js"></script>
+    <script src="./js/cart.js"></script>
+
+    <script>
+        let selectedGifts = [];
+
+        function selectGift(giftId) {
+            const giftElement = document.getElementById(giftId);
+
+            if (selectedGifts.includes(giftId)) {
+                selectedGifts = selectedGifts.filter(id => id !== giftId);
+                giftElement.classList.remove("selected");
+            } else if (selectedGifts.length < 2) {
+                selectedGifts.push(giftId);
+                giftElement.classList.add("selected");
+            } else {
+                alert("You can only select two gifts!");
+            }
+        }
+
+        function addToCart() {
+            if (selectedGifts.length !== 2) {
+                alert("Please select exactly two gifts before adding to cart.");
+                return;
+            }
+
+            const product = {
+                name: "ComfortX LIFT",
+                price: 69.99,
+                gifts: [...selectedGifts],
+                qty: 1,
+            };
+
+            addProductToCart(product);
+
+            // Reset selected gifts
+            selectedGifts = [];
+            document.querySelectorAll(".gift-option").forEach(option => option.classList.remove("selected"));
+
+            // Show success notification
+            showNotification("Product successfully added to cart!");
+        }
+    </script>
+
+</body>
+</html>

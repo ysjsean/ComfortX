@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ComfortX Trade-In Form</title>
+    <!-- Bootstrap -->
+    <!-- For Nav -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <!-- For Cart Window -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Bootstrap Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/styles.css">
+    
+    <link rel="stylesheet" href="./css/trade-in-form.css">
+
+    <script defer src="./js/trade-in-form.js"></script>
+
+    <script>
+        // Redirect to login if the user is not logged in
+        if (localStorage.getItem("isLoggedIn") !== "true") {
+            localStorage.setItem("redirect", "trade-in-form.html");
+            alert("Please log in to access the trade-in form.");
+            window.location.href = "login.html";
+        }
+    </script>
+    
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <!-- Brand Logo -->
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="./assets/images/logo.png" alt="ComfortX Logo" height="30" class="mr-2">
+                <span>ComfortX</span>
+            </a>
+    
+            <!-- Toggler Button for Small Screens -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <!-- Collapsible Navbar Content -->
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <!-- Main Navigation Links - Centered on Larger Screens, Vertical on Smaller Screens -->
+                <ul class="navbar-nav mx-auto text-center flex-lg-row flex-column">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="reviews.html">Reviews</a></li>
+                    <li class="nav-item"><a class="nav-link" href="trade-in.html">Trade In</a></li>
+                    <li class="nav-item"><a class="nav-link" href="learn-more.html">Learn More</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                </ul>
+    
+                <!-- Right Section: Cart and Login/Logout - Align Right on Larger Screens, Vertical on Smaller Screens -->
+                <div class="navbar-nav text-center flex-lg-row flex-column rightNav">
+                    <a class="nav-link" href="#" data-bs-toggle="offcanvas" data-bs-target="#cartModal" aria-controls="cartModal">
+                        <div class="cart-icon-container position-relative">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count badge badge-danger">0</span>
+                        </div>
+                        Cart
+                    </a>
+                    <a class="nav-link" id="login-btn" href="login.html"><i class="fas fa-user"></i> Login</a>
+                    <a class="nav-link" id="logout-btn" href="#" onclick="logout()" style="display: none;"><i class="fas fa-user"></i> Logout</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Trade-In Form Section -->
+    <section class="trade-in-form-section py-5">
+        <div class="container">
+            <div class="form-section">
+                <h2>Trade-In Form</h2>
+                <p>Fill out the details below to start your trade-in and receive a discount on your new ComfortX mouse.</p>
+                <form id="tradeInForm" action="#" method="POST">
+                    <div id="confirmationMessage"></div>
+                    <!-- Contact Information -->
+                    <div class="form-group">
+                        <label for="fullname">Full Name<span class="required">*</span></label>
+                        <input type="text" class="form-control" id="fullname" name="fullname" required readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address<span class="required">*</span></label>
+                        <input type="email" class="form-control" id="email" name="email" required readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number<span class="required">*</span></label>
+                        <input type="tel" class="form-control" id="phone" name="phone" required>
+                    </div>
+
+                    <!-- Trade-In Details -->
+                    <h4 class="mt-4">Mouse Details</h4>
+                    <div class="form-group">
+                        <label for="brand">Brand<span class="required">*</span></label>
+                        <input type="text" class="form-control" id="brand" name="brand" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="model">Model<span class="required">*</span></label>
+                        <input type="text" class="form-control" id="model" name="model" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="condition">Condition<span class="required">*</span></label>
+                        <select class="form-control" id="condition" name="condition" required>
+                            <option disabled value="">Select Condition</option>
+                            <option value="Excellent">Excellent - No visible wear</option>
+                            <option selected value="Good">Good - Light wear and tear</option>
+                            <option value="Fair">Fair - Noticeable wear</option>
+                            <option value="Poor">Poor - Significant wear</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="comments">Additional Comments</label>
+                        <textarea class="form-control" id="comments" name="comments" rows="3" placeholder="Any other details about the mouse..."></textarea>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="btn btn-submit mt-4">Submit Trade-In</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Popup -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="cartModal" aria-labelledby="cartModalLabel">
+        <div class="offcanvas-header" style="background-color: var(--primary-color); color: var(--secondary-text-color);">
+            <h5 class="offcanvas-title" id="cartModalLabel">CART</h5>
+            <button type="button" class="btn-close text-light" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <!-- Free shipping message -->
+            <div class="alert" style="background-color: var(--success-color); color: var(--secondary-text-color);">
+                <i class="bi bi-check-circle-fill me-2"></i>
+                <span>Your order qualifies for free shipping and free returns</span>
+            </div>
+            <!-- Cart Items -->
+            <div id="cart-items">
+                <!-- Cart items will be dynamically rendered here -->
+            </div>
+            <hr>
+            <!-- Subtotal -->
+            <div id="cart-subtotal" class="d-flex justify-content-between align-items-center">
+                <p class="text-muted mb-0">Item Subtotal:</p>
+                <p class="fw-bold mb-0">$0.00</p>
+            </div>
+            <p class="text-muted" style="font-size: 0.9em;">(Not Including Tax or Shipping)</p>
+            <!-- Checkout Button -->
+            <a href="checkout.html" class="btn d-block text-center mt-3" style="background-color: var(--primary-color); color: var(--secondary-text-color);">Checkout</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer py-4">
+        <p>&copy; 2024 ComfortX. All rights reserved.</p>
+        <ul class="list-inline">
+            <li class="list-inline-item"><a href="./pdpa.html">Privacy Policy</a></li>
+            <li class="list-inline-item"><a href="./tos.html">Terms of Service</a></li>
+            <li class="list-inline-item"><a href="./contact.html">Contact Us</a></li>
+        </ul>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="./js/nav.js"></script>
+    <script src="./js/cart.js"></script>
+
+    <script>
+        var fullname = document.getElementById("fullname");
+        var email = document.getElementById("email");
+        var number = document.getElementById("phone");
+        var brand = document.getElementById("brand");
+        var model = document.getElementById("model");
+        var comments = document.getElementById("comments");
+
+        const storedUser = JSON.parse(localStorage.getItem("user"));
+
+        fullname.value = storedUser.name;
+        email.value = storedUser.email;
+        number.value = 98745635;
+
+        brand.value = "Logitech";
+        model.value = "MX Anywhere 3S";
+        comments.innerHTML = "Still works well";
+    </script>
+</body>
+</html>

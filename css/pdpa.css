@@ -1,0 +1,58 @@
+.pdpa.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: var(--card-bg-color);
+    padding: 80px 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+h1 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+h2 {
+    color: var(--secondary-color);
+    font-size: var(--font-size-M);
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: var(--font-size-XS);
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Ordered List */
+ol {
+    padding-left: 20px;
+    font-size: var(--font-size-XS);
+}
+
+ol li {
+    margin-bottom: 10px;
+}
+
+/* Nested Lists */
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 8px;
+}
+
+/* Last Updated Date */
+.last-updated {
+    font-style: italic;
+    font-size: var(--font-size-XS);
+    color: var(--important-color);
+    text-align: right;
+    margin-top: 20px;
+}

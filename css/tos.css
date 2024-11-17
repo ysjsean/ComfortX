@@ -1,0 +1,44 @@
+/* Header Section */
+.terms-section.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: var(--card-bg-color);
+    padding: 80px 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Terms Section */
+h1 {
+    text-align: center;
+}
+
+.terms-section h2 {
+    font-size: 1.5rem;
+    color: #343a40;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.terms-section p,
+.terms-section ul {
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.terms-section ul {
+    padding-left: 20px;
+}
+
+.terms-section ul li {
+    margin-bottom: 10px;
+}
+
+/* Last Updated Date */
+.last-updated {
+    font-style: italic;
+    font-size: var(--font-size-XS);
+    color: var(--important-color);
+    text-align: right;
+    margin-top: 20px;
+}

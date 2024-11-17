@@ -1,0 +1,91 @@
+.hero-banner {
+    width: 100%;
+}
+
+.hero-banner img {
+    width: 100%;
+}
+
+.trade-in-info-section {
+    background-color: var(--primary-background-color);
+    color: var(--primary-color);
+    padding-top: 50px;
+}
+
+.title {
+    font-size: var(--font-size-L);
+    font-weight: bold;
+    color: var(--primary-color);
+    text-shadow: 1px 1px var(--secondary-background-color);
+}
+
+.trade-in-eligibility-section,
+.trade-in-process-section {
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.eligibility-card {
+    background-color: var(--primary-background-color);
+    border: 1px solid var(--input-border-color);
+    border-radius: 10px;
+    padding: 2rem;
+}
+
+.eligibility-item {
+    font-size: var(--font-size-S);
+    padding: 0.5rem 0;
+    border-top: 1px solid var(--input-border-color); /* Horizontal dividers */
+}
+
+.eligibility-item:first-child {
+    border-top: none; /* Remove top border for first item */
+}
+
+.eligibility-icon {
+    font-size: 1.75rem;
+    color: var(--success-color);
+    margin-right: 0.75rem;
+}
+
+.benefit-item,
+.process-step {
+    padding: 1.5rem;
+    border-radius: 10px;
+    background-color: var(--card-bg-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-height: 100%;
+}
+
+.benefit-item i,
+.process-step .step-number {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+}
+
+.process-step .step-number {
+    background-color: var(--primary-color);
+    color: var(--secondary-text-color);
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    margin: 0 auto 1rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.benefit-item h4,
+.process-step h5 {
+    margin-top: 1rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.btn-lg {
+    font-size: var(--font-size-M);
+    font-weight: bold;
+    padding: 0.75rem 2rem;
+}

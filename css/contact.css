@@ -1,0 +1,37 @@
+.contact-header {
+    background-color: var(--primary-background-color);
+}
+
+.contact-header h1 {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.contact-header p {
+    color: var(--primary-text-color);
+}
+
+.contact-form-container {
+    background-color: var(--primary-background-color);
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.social-section {
+    background-color: var(--primary-background-color);
+    padding: 2rem 0;
+}
+
+.social-links a {
+    font-size: var(--social-icon-size);
+    margin: 0 0.5rem;
+    color: var(--primary-color);
+}
+
+.social-links a:hover {
+    color: var(--button-bg-color);
+}
+
+#formMessage p {
+    font-size: 0.9rem;
+}
