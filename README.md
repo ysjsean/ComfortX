@@ -37,7 +37,7 @@ ComfortX
 2. Min Htet Paing
 
 **Contributions:**
-| Sean | Min |
+| **Sean** | **Min** |
 | :--: | :--: |
 | index | about |
 | menu functionalities | menu skeleton |
